@@ -3,7 +3,7 @@ using UnityEngine;
 namespace DesignPatternSample.Singleton
 {
 
-    public class SingletonMono<T> where T:MonoBehaviour
+    public class SingletonMono<T>:MonoBehaviour where T:MonoBehaviour
     {
 
         private static T instance;
