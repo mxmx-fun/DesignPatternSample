@@ -14,5 +14,11 @@ namespace DesignPatternSample.Facade
         {
             Debug.Log("TransmissionSystem Stop");
         }
+
+        public void GoForward(int speed, int time)
+        {
+            var distance = speed * time;
+            Debug.Log("TransmissionSystem GoForward " + distance + "m");
+        }
     }
 }

@@ -4,9 +4,16 @@ namespace DesignPatternSample.Facade
     public class Car
     {
         private FuelSystem fuelSystem;
+        public FuelSystem FuelSystem { get { return fuelSystem; } }
+        
         private EngineSystem engineSystem;
+        public EngineSystem EngineSystem { get { return engineSystem; } }
+
         private TransmissionSystem transmissionSystem;
+        public TransmissionSystem TransmissionSystem { get { return transmissionSystem; } }
+
         private ElectronicSystem electronicSystem;
+        public ElectronicSystem ElectronicSystem { get { return electronicSystem; } }
 
         public Car()
         {
