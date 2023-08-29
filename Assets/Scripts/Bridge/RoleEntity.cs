@@ -1,3 +1,5 @@
+using DesignPatternSample.Strategy;
+
 namespace DesignPatternSample.Bridge
 {
     public class RoleEntity
@@ -5,9 +7,12 @@ namespace DesignPatternSample.Bridge
         ICharacter characterType;
         IWeapon weaponType;
 
-        public RoleEntity(ICharacter character, IWeapon weapon, int level) {
+        IDamageStrategy damageStrategy;
+
+        public RoleEntity(ICharacter character, IWeapon weapon, IDamageStrategy damageStrategy, int level) {
             characterType = character;
             weaponType = weapon;
+            this.damageStrategy = damageStrategy;
             this.level = level;
             character.InitAttr(this); 
         }
@@ -16,6 +21,10 @@ namespace DesignPatternSample.Bridge
             weaponType.Attack();
         }
 
+        public int GetDamage() {
+            return damageStrategy.GetDamage(this);
+        }
+        
         int level;
         public int Level { get => level; set => level = value; }
 

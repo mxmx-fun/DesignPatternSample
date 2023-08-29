@@ -1,3 +1,4 @@
+using DesignPatternSample.Strategy;
 using UnityEngine;
 
 namespace DesignPatternSample.Bridge
@@ -6,7 +7,9 @@ namespace DesignPatternSample.Bridge
     {
         void Start()
         {
-            RoleEntity role = new RoleEntity(new Warrior(), new Gun(), 1);
+            RoleEntity role = new RoleEntity(new Wizard(), new Gun(), new WarriorDmgStrategy(), 1);
+            int dmg = role.GetDamage();
+            Debug.Log("damage: " + dmg);
             role.Attack();
         }
 
