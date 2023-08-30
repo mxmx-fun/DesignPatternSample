@@ -1,6 +1,7 @@
 using DesignPatternSample.Bridge;
 
-namespace DesignPatternSample.Strategy {
+namespace DesignPatternSample.Strategy
+{
 
     public class WarriorDmgStrategy : IDamageStrategy
     {
