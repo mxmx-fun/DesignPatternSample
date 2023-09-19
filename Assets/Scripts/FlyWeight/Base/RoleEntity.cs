@@ -4,6 +4,7 @@ namespace DesignPatternSample.FlyWeight {
 
         public AttrParam baseAttr;
         public int level;
+        public int maxHp;
         public int currentHp;
         public int currentAtk;
         public int currentDef;
@@ -14,7 +15,8 @@ namespace DesignPatternSample.FlyWeight {
         }
 
         public void InitAttr() {
-            currentHp = baseAttr.baseHpMax + baseAttr.growHpMax * (level - 1);
+            maxHp = baseAttr.baseHpMax + baseAttr.growHpMax * (level - 1);
+            currentHp = maxHp;
             currentAtk = baseAttr.baseAtk + baseAttr.growAtk * (level - 1);
             currentDef = baseAttr.baseDef + baseAttr.growDef * (level - 1);
             currentSpd = baseAttr.baseSpd + baseAttr.growSpd * (level - 1);

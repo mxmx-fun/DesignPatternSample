@@ -16,7 +16,7 @@ namespace DesignPatternSample.FlyWeight
             role.SetBaseAttr(attr);
             role.level = 1;
             role.InitAttr();
-            Debug.Log("Role Name:" + role.baseAttr.name + " Role Level:" + role.level + " Role Hp:" + role.currentHp + " Role Atk:" + role.currentAtk + " Role Def:" + role.currentDef + " Role Spd:" + role.currentSpd);
+            Debug.Log("Role Name:" + role.baseAttr.name + " Role Level:" + role.level + " Role Hp:" + role.maxHp + " Role Atk:" + role.currentAtk + " Role Def:" + role.currentDef + " Role Spd:" + role.currentSpd);
         }
     }
 }
